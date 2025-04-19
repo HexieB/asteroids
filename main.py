@@ -51,7 +51,7 @@ def main():
             for bullet in bullets:
                 if sprite.get_collide(bullet):
                     bullet.kill()
-                    sprite.kill()
+                    sprite.split()
             if sprite.get_collide(player):
                 print("Game over!")
                 pygame.quit()
