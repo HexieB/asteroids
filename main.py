@@ -48,6 +48,10 @@ def main():
     
     # Check for collisions
         for sprite in asteroids:
+            for bullet in bullets:
+                if sprite.get_collide(bullet):
+                    bullet.kill()
+                    sprite.kill()
             if sprite.get_collide(player):
                 print("Game over!")
                 pygame.quit()
